@@ -10,8 +10,11 @@ namespace Lab0_EDI.Controllers
     public class ClientsController : Controller
     {
         // GET: ClientsController
+
+        [HttpPost]
         public ActionResult Index()
         {
+            
             return View();
         }
 

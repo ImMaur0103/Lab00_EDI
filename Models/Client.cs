@@ -9,7 +9,7 @@ namespace Lab0_EDI.Models
     {
         public string Name { get; set; }
         public string LastName { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Description { get; set; }
 
     }

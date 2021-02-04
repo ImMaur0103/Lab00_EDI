@@ -17,9 +17,21 @@ namespace Lab0_EDI.Controllers
         {
             _logger = logger;
         }
-
-        public IActionResult Index()
+        public IActionResult Index(String Nombre, String Apellido, String Telefono, String Descripcion)
         {
+            if ((Nombre != "ingrese nombre" && Nombre != null) && (Apellido != "ingrese Apellido" && Apellido != null) && (Telefono != "ingrese Telefono" && Telefono != null ) && (Descripcion != "ingrese Descripcion" && Descripcion != null))
+            {
+                Client Nuevo_Cliente = new Client();
+                Nuevo_Cliente.Name = Nombre;
+                Nuevo_Cliente.LastName = Apellido;
+                Nuevo_Cliente.PhoneNumber = Telefono;
+                Nuevo_Cliente.Description = Descripcion;
+                ViewBag.Mensaje = "Guardado";
+            }
+            else
+            {
+
+            }
             return View();
         }
 

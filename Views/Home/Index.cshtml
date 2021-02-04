@@ -2,12 +2,19 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<form method="post">
 
     <div>
-        <li><input type="text" id="nombre" value="ingrese nombre" /></li>
-        <li><input type="text" id="Apellido" value="ingrese Apellido" /></li>
-        <li><input type="text" id="telefono" value="ingrese Telefono" /></li>
-        <li><input  type="text" id="Descripcion" value="ingrese Descripcion" /></li>
+        <li><input type="text" class="dropleft" name="Nombre" value="ingrese nombre" /></li>
+        <li><input type="text" name="Apellido" value="ingrese Apellido" /></li>
+        <li><input type="text" name="Telefono" value="ingrese Telefono" /></li>
+        <li><input  type="text" name="Descripcion" value="ingrese Descripcion" /></li>
     </div>
-</div>
+    <div>
+        <button type="submit" class="btn-group">Guardar</button>
+    </div>
+    <div>
+        <h3>@ViewBag.Mensaje</h3>
+
+    </div>
+</form>
