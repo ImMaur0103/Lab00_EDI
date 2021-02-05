@@ -38,8 +38,9 @@ namespace Lab0_EDI.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy(bool BotonOrdenar)
         {
+            int tamano = Singleton.Instance.ClientsList.Count;
             //El boton ordenar redirigue para esta funcion, se necesita hacer un cambio para poder invocar el selection sort
             return View(Singleton.Instance.ClientsList);
         }
