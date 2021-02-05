@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Lab0_EDI.Models;
+using Lab0_EDI.Extra;
 
 namespace Lab0_EDI.Controllers
 {
@@ -19,7 +20,8 @@ namespace Lab0_EDI.Controllers
         }
         public IActionResult Index(String Nombre, String Apellido, String Telefono, String Descripcion)
         {
-            if ((Nombre != "ingrese nombre" && Nombre != null) && (Apellido != "ingrese Apellido" && Apellido != null) && (Telefono != "ingrese Telefono" && Telefono != null ) && (Descripcion != "ingrese Descripcion" && Descripcion != null))
+            if ((Nombre != "ingrese nombre" && Nombre != null) && (Apellido != "ingrese Apellido" && Apellido != null) &&
+               (Telefono != "ingrese Telefono" && Telefono != null ) && (Descripcion != "ingrese Descripcion" && Descripcion != null))
             {
                 Client Nuevo_Cliente = new Client();
                 Nuevo_Cliente.Name = Nombre;
@@ -27,6 +29,7 @@ namespace Lab0_EDI.Controllers
                 Nuevo_Cliente.PhoneNumber = Telefono;
                 Nuevo_Cliente.Description = Descripcion;
                 ViewBag.Mensaje = "Guardado";
+                Singleton.Instance.ClientsList.Add(Nuevo_Cliente);
             }
             else
             {
