@@ -5,37 +5,26 @@
 <h1>Ingresar Cliente</h1>
 
 <form method="post">
-    <!---
+    
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
+            <input type="text" class="form-control"  name="Nombre" placeholder="Nombre">
             <label for="floatingInput">Nombre</label>
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Apellido">
+            <input type="text" class="form-control" name="Apellido" placeholder="Apellido">
             <label for="floatingPassword">Apellido</label>
         </div>
         <div class="form-floating">
-            <input type="tel" class="form-control" id="floatingInput" placeholder="Teléfono">
+            <input type="tel" class="form-control" name="Telefono" placeholder="Teléfono">
             <label for="floatingPassword">Teléfono</label>
         </div>
         <div class="form-floating">
-            <textarea class="form-control" placeholder="Descripción..." id="Descripción" style="height: 100px"></textarea>
+            <textarea class="form-control" placeholder="Descripción..." name="Descripcion" style="height: 100px"></textarea>
             <label for="floatingTextarea2">Descripción</label>
         </div>
         <div>
-            <button type="submit" class="btn-group">Guardar</button>
+            <button type="submit" class="btn btn-outline-primary">Guardar</button>
         </div>
-    -->
-    <div>
-        <li><input type="text" name="Nombre" placeholder="ingrese nombre" /></li>
-        <li><input type="text" name="Apellido" placeholder="ingrese Apellido" /></li>
-        <li><input type="text" name="Telefono" placeholder="ingrese Telefono" /></li>
-        <li><input type="text" name="Descripcion" placeholder="ingrese Descripcion" /></li>
-    </div>
-
-    <div>
-        <button type="submit" class="btn btn-outline-primary">Guardar</button>
-    </div>
     <div>
         <h3>@ViewBag.Mensaje</h3>
 
