@@ -40,7 +40,7 @@ namespace Lab0_EDI.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return View(Singleton.Instance.ClientsList);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -21,14 +21,22 @@ namespace Lab0_EDI.Extra
         {
             for (int i = 0; i < size - 1; i++)
             {
-                int medium = i; 
-                for(int j = i + 1; j < size; j++) {
-                    if(compare(medium, j, ClientsList)) {
+                int medium = i;
+                for (int j = i + 1; j < size; j++)
+                {
+                    if (compare(medium, j, ClientsList))
+                    {
                         medium = j;
                     }
                 }
                 swap(ClientsList.ElementAt(i), ClientsList.ElementAt(medium), ClientsList, i, medium);
             }
+        }
+
+        static int Ascendente(string x, string y)
+        {
+            int value = string.Compare(x, y);
+            return value;
         }
     }
 }
