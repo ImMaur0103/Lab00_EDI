@@ -9,9 +9,6 @@
 <h1>Listado de clientes</h1>
 
 <link href="~/css/all.min.css" rel="stylesheet" />
-<form method="post" >
-    <button name="BotonOrdenar"><i class=" fas fa-sort-amount-up-alt"></i></button>
-</form>
 
 <table class="table">
     <thead class="table-dark">
@@ -27,6 +24,11 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                <form method="post">
+                    <button name="BotonOrdenar"><i class=" fas fa-sort-amount-up-alt"></i></button>
+                </form>
             </th>
         </tr>
     </thead>
