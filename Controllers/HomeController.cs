@@ -29,7 +29,7 @@ namespace Lab0_EDI.Controllers
                 Nuevo_Cliente.PhoneNumber = Telefono;
                 Nuevo_Cliente.Description = Descripcion;
                 ViewBag.Mensaje = "Guardado";
-                Singleton.Instance.ClientsList.Add(Nuevo_Cliente);
+                Singleton.Instance.ClientsList.Add(Nuevo_Cliente); 
             }
             else
             {
